@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color-one: #008236;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--font-roboto);
+}
+
+@theme inline {
+  --color-primary-color-one: var(--primary-color-one);
+  --font-roboto: var(--font-roboto);
+}
+
+@utility container {
+  max-width: 1320px;
+  margin: auto;
+}
+
+@layer components {
+  .active {
+    @apply p-3 bg-primary-color-one text-white rounded-md;
+  }
+}
