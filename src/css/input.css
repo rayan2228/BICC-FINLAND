@@ -3,11 +3,15 @@
 
 :root {
   --primary-color-one: #008236;
+  --primary-color-two: #a6e9c2;
+  --primary-color-three: #00a63e;
   --font-roboto: "Roboto", sans-serif;
   --font-poppins: "Poppins", sans-serif;
 }
 @theme inline {
   --color-primary-color-one: var(--primary-color-one);
+  --color-primary-color-two: var(--primary-color-two);
+  --color-primary-color-three: var(--primary-color-three);
   --font-roboto: var(--font-roboto);
   --font-poppins: var(--font-poppins);
 }
@@ -32,6 +36,16 @@ button {
 
   .btn-donate {
     @apply flex items-center justify-center bg-primary-color-one text-white px-4 py-3 rounded-xl gap-2;
+  }
+
+  .title {
+    @apply font-medium text-[32px]  text-primary-color-one;
+  }
+  .prayerCardList {
+    @apply border-b border-primary-color-two flex items-center justify-between text-gray-600 text-lg pb-2;
+  }
+  .btn {
+    @apply flex items-center gap-3 bg-white text-primary-color-one justify-center rounded-md py-3.5;
   }
 }
 

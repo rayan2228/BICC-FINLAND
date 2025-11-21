@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -14,8 +15,12 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-medium: 500;
     --radius-md: 0.375rem;
     --radius-xl: 0.75rem;
@@ -193,15 +198,6 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
-  .right-0 {
-    right: calc(var(--spacing) * 0);
-  }
-  .right-2 {
-    right: calc(var(--spacing) * 2);
-  }
-  .right-3 {
-    right: calc(var(--spacing) * 3);
-  }
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
@@ -233,17 +229,23 @@
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
   }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
+  .my-\[106px\] {
+    margin-block: 106px;
+  }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
   }
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
   }
   .mt-7\.5 {
     margin-top: calc(var(--spacing) * 7.5);
-  }
-  .mr-10 {
-    margin-right: calc(var(--spacing) * 10);
   }
   .flex {
     display: flex;
@@ -266,6 +268,9 @@
   .w-18 {
     width: calc(var(--spacing) * 18);
   }
+  .w-\[48\%\] {
+    width: 48%;
+  }
   .w-\[562px\] {
     width: 562px;
   }
@@ -286,14 +291,6 @@
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * 1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-y-1\/2 {
-    --tw-translate-y: calc(1/2 * 100%);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .resize {
     resize: both;
   }
@@ -312,6 +309,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
@@ -320,9 +320,6 @@
   }
   .overflow-hidden {
     overflow: hidden;
-  }
-  .rounded {
-    border-radius: 0.25rem;
   }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
@@ -343,6 +340,9 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .border-gray-400 {
+    border-color: var(--color-gray-400);
+  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -352,8 +352,23 @@
       background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
     }
   }
+  .bg-gray-100 {
+    background-color: var(--color-gray-100);
+  }
   .bg-gray-400 {
     background-color: var(--color-gray-400);
+  }
+  .bg-gray-500 {
+    background-color: var(--color-gray-500);
+  }
+  .bg-gray-600 {
+    background-color: var(--color-gray-600);
+  }
+  .bg-primary-color-one {
+    background-color: var(--primary-color-one);
+  }
+  .bg-primary-color-three {
+    background-color: var(--primary-color-three);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -361,11 +376,20 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .p-7 {
+    padding: calc(var(--spacing) * 7);
+  }
+  .p-7\.5 {
+    padding: calc(var(--spacing) * 7.5);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
-  }
-  .py-4 {
-    padding-block: calc(var(--spacing) * 4);
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
@@ -376,9 +400,16 @@
   .font-poppins {
     font-family: var(--font-poppins);
   }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-\[28px\] {
+    font-size: 28px;
   }
   .text-\[32px\] {
     font-size: 32px;
@@ -398,6 +429,12 @@
   }
   .text-primary-color-one {
     color: var(--primary-color-one);
+  }
+  .text-primary-color-three {
+    color: var(--primary-color-three);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .uppercase {
     text-transform: uppercase;
@@ -515,6 +552,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --primary-color-one: #008236;
+  --primary-color-two: #a6e9c2;
+  --primary-color-three: #00a63e;
   --font-roboto: "Roboto", sans-serif;
   --font-poppins: "Poppins", sans-serif;
 }
@@ -541,6 +580,34 @@ button {
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 3);
     color: var(--color-white);
+  }
+  .title {
+    font-size: 32px;
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--primary-color-one);
+  }
+  .prayerCardList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    border-color: var(--primary-color-two);
+    padding-bottom: calc(var(--spacing) * 2);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    color: var(--color-gray-600);
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 3);
+    border-radius: var(--radius-md);
+    background-color: var(--color-white);
+    padding-block: calc(var(--spacing) * 3.5);
+    color: var(--primary-color-one);
   }
 }
 @layer utilities {
