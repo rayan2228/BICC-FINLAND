@@ -34,7 +34,7 @@ button {
     @apply p-3 bg-primary-color-one text-white rounded-md;
   }
 
-  .btn-donate {
+  .btn-primary {
     @apply flex items-center justify-center bg-primary-color-one text-white px-4 py-3 rounded-xl gap-2;
   }
 
