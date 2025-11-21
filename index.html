@@ -6,6 +6,7 @@
     <link href="./src/css/output.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- ================= nav section start =================  -->
     <nav class="my-2">
       <div class="container">
         <div
@@ -49,7 +50,9 @@
         </div>
       </div>
     </nav>
-    <section id="hero">
+    <!-- ================= nav section end =================  -->
+    <!-- ================= hero section start ================= -->
+    <section id="hero" class="bg-red">
       <div class="container">
         <div class="flex flex-col justify-center items-center gap-3">
           <h1 class="text-gradient font-medium text-[64px]">
@@ -104,6 +107,8 @@
         </div>
       </div>
     </section>
+    <!-- ================= hero section end ================= -->
+    <!-- ================= prayerTime section start ================= -->
     <section id="prayerTime" class="my-[106px]">
       <h2 class="title text-center">Prayer Time</h2>
       <div class="container">
@@ -175,6 +180,8 @@
         </div>
       </div>
     </section>
+    <!-- ================= prayerTime section end ================= -->
+    <!-- ================= islamicClasses section start ================= -->
     <section
       id="islamicClasses"
       style="
@@ -291,7 +298,8 @@
         </div>
       </div>
     </section>
-
+    <!-- ================== islamicClasses section end ================= -->
+    <!-- ================== Our Services start ================= -->
     <section id="ourServices" class="my-10">
       <h2 class="text-center title">Our Services</h2>
       <div class="container">
@@ -421,7 +429,7 @@
         </div>
       </div>
     </section>
-
+    <!-- ================== Gallery Section Start ================= -->
     <section id="gallery" class="my-20">
       <h2 class="title text-center">Community Gallery</h2>
       <div class="container">
@@ -516,6 +524,8 @@
         </div>
       </div>
     </section>
+    <!-- ================== Gallery section end ================= -->
+    <!-- ================== Contact Section Start ================= -->
     <section
       id="contact"
       class="py-[143px]"
@@ -569,12 +579,73 @@
                 class="border border-gray-400 rounded-xl px-2 py-3"
               />
             </div>
-            <button type="submit" class="btn-primary">Submit <img src="./src/assets/icons/arrow.svg" /></button>
+            <button type="submit" class="btn-primary">
+              Submit <img src="./src/assets/icons/arrow.svg" />
+            </button>
           </form>
         </div>
       </div>
     </section>
-    <!-- Social Links -->
+    <!-- ================== Contact Section End ================= -->
+    <!-- ================== Footer Section Start ================= -->
+    <footer class="bg-primary-color-three py-[45px] text-white">
+      <div class="container">
+        <div class="flex justify-between">
+          <div class="flex flex-col gap-3">
+            <h2 class="font-bold text-2xl">BICC FINLAND</h2>
+            <p class="text-lg w-[327px]">
+              Bangladesh Islamic Cultural Centre - Building a stronger Muslim
+              community through faith, education, and unity.
+            </p>
+            <ul class="flex flex-col font-medium text-lg gap-1">
+              <li class="flex items-center gap-2">
+                <img src="./src/assets/icons/phone.svg" alt="phone" /><a
+                  href="tel:+(555) 123-4567"
+                  >(555) 123-4567</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <img src="./src/assets/icons/home.svg" alt="location" />
+                <address>Malminkaari 9 A (3rd floor)</address>
+              </li>
+              <li class="flex items-center gap-2">
+                <img src="./src/assets/icons/mail.svg" alt="mail" />
+                <a href="mailto: info@biccfinland.org"> info@biccfinland.org</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="font-bold text-2xl">Quick Links</h2>
+            <ul class="flex gap-1 flex-col my-2.5 text-lg">
+              <li>
+                <a href="/">About</a1>
+              </li>
+              <li>
+                <a href="/">Services</a2>
+              </li>
+              <li>
+                <a href="/">Classes</a3>
+              </li>
+              <li>
+                <a href="/">Gallery</a4>
+              </li>
+              <li>
+                <a href="/">Community</a5>
+              </li>
+            </ul>
+          </div>
+          <div >
+            <h2 class="font-bold text-2xl">Support Our Mission</h2>
+            <p class="text-lg w-[293px] my-2">Help us build our permanent mosque and serve the community better.</p>
+            <button class="btn-primary ">
+              Donate Us <img src="./src/assets/icons/heart-handshake.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ================== Footer Section End ================= -->
+    <!-- ================== Social Links Start ================= -->
     <div id="socialLInks" class="fixed top-1/2 right-4 -translate-y-1/2">
       <ul class="flex flex-col justify-center items-end gap-3">
         <li>
@@ -599,5 +670,6 @@
         </li>
       </ul>
     </div>
+    <!-- ================== Social Links End ================= -->
   </body>
 </html>

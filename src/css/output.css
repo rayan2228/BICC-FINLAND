@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -25,6 +26,7 @@
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-medium: 500;
+    --font-weight-bold: 700;
     --radius-md: 0.375rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
@@ -201,11 +203,17 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .z-10 {
+    z-index: 10;
   }
   .container {
     width: 100%;
@@ -234,6 +242,9 @@
   }
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
+  }
+  .my-2\.5 {
+    margin-block: calc(var(--spacing) * 2.5);
   }
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
@@ -289,6 +300,12 @@
   .w-28 {
     width: calc(var(--spacing) * 28);
   }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
+  .w-\[2\] {
+    width: 2;
+  }
   .w-\[32\%\] {
     width: 32%;
   }
@@ -298,8 +315,14 @@
   .w-\[48\%\] {
     width: 48%;
   }
+  .w-\[293px\] {
+    width: 293px;
+  }
   .w-\[318px\] {
     width: 318px;
+  }
+  .w-\[327px\] {
+    width: 327px;
   }
   .w-\[562px\] {
     width: 562px;
@@ -350,11 +373,17 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-\[171px\] {
+    gap: 171px;
+  }
   .gap-x-\[150px\] {
     column-gap: 150px;
   }
   .gap-y-14 {
     row-gap: calc(var(--spacing) * 14);
+  }
+  .self-end {
+    align-self: flex-end;
   }
   .overflow-hidden {
     overflow: hidden;
@@ -411,8 +440,17 @@
   .bg-primary-color-three {
     background-color: var(--primary-color-three);
   }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-white\/80 {
+    background-color: color-mix(in srgb, #fff 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
   }
   .object-cover {
     object-fit: cover;
@@ -444,11 +482,20 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .py-\[45px\] {
+    padding-block: 45px;
+  }
   .py-\[143px\] {
     padding-block: 143px;
   }
   .text-center {
     text-align: center;
+  }
+  .text-right {
+    text-align: right;
   }
   .font-poppins {
     font-family: var(--font-poppins);
@@ -477,6 +524,10 @@
   }
   .text-\[64px\] {
     font-size: 64px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
