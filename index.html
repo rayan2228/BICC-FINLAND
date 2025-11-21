@@ -6,14 +6,16 @@
     <link href="./src/css/output.css" rel="stylesheet" />
   </head>
   <body>
-    <nav class="py-4">
+    <nav class="my-2">
       <div class="container">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between p-4 border border-gray-300 rounded-md">
           <div>
             <img src="./public/navLogo.png" alt="BICC FINLAND" />
           </div>
           <menu>
-            <ul class="flex uppercase gap-4 items-center justify-center">
+            <ul
+              class="flex uppercase gap-4 items-center justify-center font-medium"
+            >
               <li>
                 <a class="active" href="/">HOME</a>
               </li>
@@ -38,14 +40,91 @@
             </ul>
           </menu>
           <div>
-            <button
-              class="flex items-center justify-center bg-primary-color-one text-white px-4 py-3 rounded-xl gap-2"
-            >
+            <button class="btn-donate">
               Donate Us <img src="./src/assets/icons/heart-handshake.svg" />
             </button>
           </div>
         </div>
       </div>
     </nav>
+    <section id="hero">
+      <div class="container">
+        <div class="flex flex-col justify-center items-center gap-3">
+          <h1 class="text-gradient font-medium text-[64px]">
+            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
+          </h1>
+          <h4 class="font-medium text-[32px] text-primary-color-one">
+            Help Us Build Our Permanent Mosque
+          </h4>
+          <p class="w-[743px] text-xl text-gray-500 text-center">
+            Join our community in creating a sacred space for worship, learning,
+            and unity. Every donation brings us closer to our goal.
+          </p>
+          <div class="relative overflow-hidden">
+            <div
+              class="absolute w-full h-full top-0 left-0 bg-black/50 rounded-3xl flex justify-center items-center"
+            >
+              <button
+                class="bg-white flex justify-center items-center rounded-full w-18 h-18"
+              >
+                <img src="./src/assets/icons/play.svg" />
+              </button>
+            </div>
+            <iframe
+              class="rounded-3xl"
+              width="743"
+              height="368"
+              src="https://www.youtube.com/embed/tQHAwV9B8hQ?si=s_9wLIN-0NoIqHVJ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="px-16 py-6 rounded-xl border border-gray-300 mt-7.5">
+            <div
+              class="w-[562px] bg-gray-400 h-1.5 relative after:absolute after:top-0 after:left-0 after:bg-primary-color-one after:w-1/2 after:h-full after:content-['']"
+            ></div>
+            <div class="flex justify-between items-center text-gray-600 mt-3">
+              <h5>Donation Raised:$ 30.000</h5>
+              <h5>Donation Goal:$ 30.000</h5>
+            </div>
+          </div>
+          <marquee
+            behavior=""
+            direction="left"
+            class="text-primary-color-one font-poppins font-medium text-[32px] relative after:absolute after:top-0 after:left-0 after:content-[''] after:w-32 after:h-full after:bg-white/80 before:absolute before:top-0 before:right-0 before:content-[''] before:w-32 before:h-full before:bg-white/80"
+          >
+            Our Donor : Mir Moniruzzaman ($10.00) ✦ Mir Moniruzzaman ($10.00) ✦
+            Thank You For Visiting The Site!! ✦
+          </marquee>
+        </div>
+      </div>
+    </section>
+    <div id="socialLInks" class="fixed top-1/2 right-4 -translate-y-1/2">
+      <ul class="flex flex-col justify-center items-end gap-3">
+        <li>
+          <a href="">
+            <img src="./src/assets/icons/twitter.svg" alt="twitter" />
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./src/assets/icons/facebook.svg" alt="facebook" />
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./src/assets/icons/whatsapp.svg" alt="whatsapp" />
+          </a>
+        </li>
+        <li>
+          <button class="btn-donate">
+            Donate Us <img src="./src/assets/icons/heart-handshake.svg" />
+          </button>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
