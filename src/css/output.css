@@ -303,6 +303,12 @@
   .h-28 {
     height: calc(var(--spacing) * 28);
   }
+  .h-\[68\] {
+    height: 68;
+  }
+  .h-\[368px\] {
+    height: 368px;
+  }
   .h-full {
     height: 100%;
   }
@@ -315,11 +321,17 @@
   .w-\[48\%\] {
     width: 48%;
   }
+  .w-\[48\] {
+    width: 48;
+  }
   .w-\[318px\] {
     width: 318px;
   }
   .w-\[407px\] {
     width: 407px;
+  }
+  .w-\[559px\] {
+    width: 559px;
   }
   .w-\[562px\] {
     width: 562px;
@@ -385,6 +397,9 @@
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
@@ -545,6 +560,10 @@
   }
   .text-\[64px\] {
     font-size: 64px;
+  }
+  .leading-7 {
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -780,6 +799,10 @@ button {
   inherits: false;
   initial-value: solid;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -843,6 +866,7 @@ button {
       --tw-translate-y: 0;
       --tw-translate-z: 0;
       --tw-border-style: solid;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
       --tw-content: "";
