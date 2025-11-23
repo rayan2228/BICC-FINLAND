@@ -10,40 +10,26 @@
     <nav class="my-2">
       <div class="container">
         <div
-          class="flex items-center justify-between p-4 border border-gray-300 rounded-md"
+          class="flex flex-wrap md:flex-nowrap items-center justify-between p-4 border border-gray-300 rounded-md gap-4"
         >
           <div>
-            <img src="./public/navLogo.png" alt="BICC FINLAND" />
+            <img src="./public/navLogo.png" alt="BICC FINLAND" class="w-32 md:w-auto" />
           </div>
-          <menu>
+          <menu class="w-full md:w-auto">
             <ul
-              class="flex uppercase gap-4 items-center justify-center font-medium"
+              class="flex flex-wrap justify-center md:flex-nowrap uppercase gap-4 items-center font-medium text-sm md:text-base"
             >
-              <li>
-                <a class="active" href="/">HOME</a>
-              </li>
-              <li>
-                <a href="/prayers">PRAYER’S</a>
-              </li>
-              <li>
-                <a href="/time">TIME</a>
-              </li>
-              <li>
-                <a href="/classes">CLASSES</a>
-              </li>
-              <li>
-                <a href="/gallery">GALLERY</a>
-              </li>
-              <li>
-                <a href="/services">SERVICES</a>
-              </li>
-              <li>
-                <a href="/community">COMMUNITY</a>
-              </li>
+              <li><a class="active" href="/">HOME</a></li>
+              <li><a href="/prayers">PRAYER’S</a></li>
+              <li><a href="/time">TIME</a></li>
+              <li><a href="/classes">CLASSES</a></li>
+              <li><a href="/gallery">GALLERY</a></li>
+              <li><a href="/services">SERVICES</a></li>
+              <li><a href="/community">COMMUNITY</a></li>
             </ul>
           </menu>
           <div>
-            <button class="btn-primary">
+            <button class="btn-primary flex items-center gap-1">
               Donate Us <img src="./src/assets/icons/heart-handshake.svg" />
             </button>
           </div>
@@ -51,137 +37,108 @@
       </div>
     </nav>
     <!-- ================= nav section end =================  -->
+
     <!-- ================= hero section start ================= -->
     <section id="hero" class="py-10">
       <div class="container">
-        <div class="flex flex-col justify-center items-center gap-3">
-          <h1 class="text-gradient font-medium text-[64px]">
+        <div class="flex flex-col justify-center items-center gap-3 px-4">
+          <h1 class="text-gradient font-medium text-4xl md:text-[64px] text-center">
             بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
           </h1>
-          <h4 class="font-medium text-[32px] text-primary-color-one">
+
+          <h4 class="font-medium text-xl md:text-[32px] text-primary-color-one text-center">
             Help Us Build Our Permanent Mosque
           </h4>
-          <p class="w-[743px] text-xl text-gray-500 text-center">
+
+          <p class="w-full max-w-[743px] text-base md:text-xl text-gray-500 text-center px-2">
             Join our community in creating a sacred space for worship, learning,
             and unity. Every donation brings us closer to our goal.
           </p>
-          <div class="relative overflow-hidden">
+
+          <div class="relative overflow-hidden w-full max-w-[743px] px-2">
             <div
               class="absolute w-full h-full top-0 left-0 bg-black/50 rounded-3xl flex justify-center items-center"
             >
               <button
-                class="bg-white flex justify-center items-center rounded-full w-18 h-18"
+                class="bg-white flex justify-center items-center rounded-full w-16 h-16 md:w-18 md:h-18"
               >
                 <img src="./src/assets/icons/play.svg" />
               </button>
             </div>
+
             <iframe
-              class="rounded-3xl"
-              width="743"
-              height="368"
+              class="rounded-3xl w-full h-[220px] md:h-[368px]"
               src="https://www.youtube.com/embed/tQHAwV9B8hQ?si=s_9wLIN-0NoIqHVJ"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </div>
-          <div class="px-16 py-6 rounded-xl border border-gray-300 mt-7.5">
+
+          <div
+            class="px-6 md:px-16 py-6 rounded-xl border border-gray-300 mt-7.5 w-full max-w-[600px]"
+          >
             <div
-              class="w-[562px] bg-gray-400 h-1.5 relative after:absolute after:top-0 after:left-0 after:bg-primary-color-one after:w-1/2 after:h-full after:content-['']"
+              class="w-full bg-gray-400 h-1.5 relative after:absolute after:top-0 after:left-0 after:bg-primary-color-one after:w-1/2 after:h-full"
             ></div>
-            <div class="flex justify-between items-center text-gray-600 mt-3">
+
+            <div class="flex justify-between items-center text-gray-600 mt-3 text-sm md:text-base">
               <h5>Donation Raised:$ 30.000</h5>
               <h5>Donation Goal:$ 30.000</h5>
             </div>
           </div>
-          <div class="relative overflow-hidden">
-            <div
-              class="absolute top-0 left-0 w-32 h-full bg-white/80 z-10"
-            ></div>
-            <div
-              class="absolute top-0 right-0 w-32 h-full bg-white/80 z-10"
-            ></div>
 
-          <marquee
-            direction="left"
-            class="text-primary-color-one font-poppins font-medium text-[32px]"
-          >
-            Our Donor : Mir Moniruzzaman ($10.00) ✦ Mir Moniruzzaman ($10.00) ✦
-            Thank You For Visiting The Site!! ✦
-          </marquee>
+          <div class="relative overflow-hidden w-full">
+            <div class="absolute top-0 left-0 w-16 md:w-32 h-full bg-white/80 z-10"></div>
+            <div class="absolute top-0 right-0 w-16 md:w-32 h-full bg-white/80 z-10"></div>
+
+            <marquee
+              direction="left"
+              class="text-primary-color-one font-poppins font-medium text-xl md:text-[32px]"
+            >
+              Our Donor : Mir Moniruzzaman ($10.00) ✦ Mir Moniruzzaman ($10.00) ✦
+              Thank You For Visiting The Site!! ✦
+            </marquee>
           </div>
         </div>
       </div>
     </section>
     <!-- ================= hero section end ================= -->
+
     <!-- ================= prayerTime section start ================= -->
     <section id="prayerTime" class="my-[106px]">
       <h2 class="title text-center">Prayer Time</h2>
       <div class="container">
-        <div class="flex my-10 justify-between">
-          <div
-            class="w-[48%] bg-gray-100 border border-gray-400 rounded-md p-7.5"
-          >
+        <div class="flex flex-col md:flex-row my-10 justify-between gap-6">
+          <div class="w-full md:w-[48%] bg-gray-100 border border-gray-400 rounded-md p-7.5">
             <h3 class="title text-[28px]">Prayer Time</h3>
             <div class="flex flex-col gap-3 mt-4">
-              <div class="prayerCardList">
-                <h3>Fajr</h3>
-                <h4>5.00PM</h4>
-              </div>
-              <div class="prayerCardList">
-                <h3>Fajr</h3>
-                <h4>5.00PM</h4>
-              </div>
-              <div class="prayerCardList">
-                <h3>Fajr</h3>
-                <h4>5.00PM</h4>
-              </div>
-              <div class="prayerCardList">
-                <h3>Fajr</h3>
-                <h4>5.00PM</h4>
-              </div>
-              <div class="prayerCardList">
-                <h3>Fajr</h3>
-                <h4>5.00PM</h4>
-              </div>
-              <div class="prayerCardList">
-                <h3>Fajr</h3>
-                <h4>5.00PM</h4>
-              </div>
+              <div class="prayerCardList"><h3>Fajr</h3><h4>5.00PM</h4></div>
+              <div class="prayerCardList"><h3>Fajr</h3><h4>5.00PM</h4></div>
+              <div class="prayerCardList"><h3>Fajr</h3><h4>5.00PM</h4></div>
+              <div class="prayerCardList"><h3>Fajr</h3><h4>5.00PM</h4></div>
+              <div class="prayerCardList"><h3>Fajr</h3><h4>5.00PM</h4></div>
+              <div class="prayerCardList"><h3>Fajr</h3><h4>5.00PM</h4></div>
             </div>
           </div>
-          <div class="w-[48%] flex flex-col gap-3">
-            <div
-              class="bg-primary-color-three rounded-md p-5 text-white font-medium flex flex-col gap-2"
-            >
+
+          <div class="w-full md:w-[48%] flex flex-col gap-3">
+            <div class="bg-primary-color-three rounded-md p-5 text-white font-medium flex flex-col gap-2">
               <h4 class="text-[28px]">Jummah Prayer</h4>
               <h5 class="text-xl">Every Friday</h5>
               <h6 class="text-2xl">1.00PM</h6>
-              <button class="bg-white btn">
+              <button class="bg-white btn flex items-center gap-1">
                 Join Live Khutbah
-                <img
-                  src="./src//assets/icons/device-desktop-bolt.svg"
-                  alt="device-desktop-bolt"
-                />
+                <img src="./src//assets/icons/device-desktop-bolt.svg" />
               </button>
             </div>
-            <div
-              class="bg-gray-100 border border-gray-400 rounded-md p-5 font-medium flex flex-col gap-2"
-            >
-              <h4 class="text-[28px] text-primary-color-three">
-                Monthly Prayer Times
-              </h4>
-              <h5 class="text-xl text-gray-600">
-                Download complete prayer schedule for the month
-              </h5>
-              <button class="bg-primary-color-one btn text-white">
+
+            <div class="bg-gray-100 border border-gray-400 rounded-md p-5 font-medium flex flex-col gap-2">
+              <h4 class="text-[28px] text-primary-color-three">Monthly Prayer Times</h4>
+              <h5 class="text-xl text-gray-600">Download complete prayer schedule for the month</h5>
+              <button class="bg-primary-color-one btn text-white flex items-center gap-1">
                 Download PDF
-                <img
-                  src="./src//assets/icons/book-upload.svg"
-                  alt="book-upload"
-                />
+                <img src="./src//assets/icons/book-upload.svg" />
               </button>
             </div>
           </div>
@@ -189,405 +146,291 @@
       </div>
     </section>
     <!-- ================= prayerTime section end ================= -->
+
     <!-- ================= islamicClasses section start ================= -->
     <section
       id="islamicClasses"
-      style="
-        background-image: url(./src/assets/bgImages/islamicClassesBg.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      "
       class="py-[143px]"
+      style="background-image: url(./src/assets/bgImages/islamicClassesBg.png); background-size: cover;"
     >
       <h2 class="title text-center">Islamic Classes</h2>
       <div class="container">
-        <div class="flex my-10 justify-between items-center">
-          <div class="w-[48%] bg-white p-7.5 rounded-3xl">
+        <div class="flex flex-col md:flex-row my-10 justify-between items-center gap-6">
+          <div class="w-full md:w-[48%] bg-white p-7.5 rounded-3xl">
             <h3 class="title text-[28px]">Adult Classes</h3>
             <div class="flex flex-col my-8 gap-3">
-              <div
-                class="flex items-center justify-between text-gray-900 gap-2"
-              >
-                <img src="./src/assets/icons/pattern.svg" alt="pattern" />
+              <!-- 3 items (kept same) -->
+              <div class="flex items-center justify-between text-gray-900 gap-2">
+                <img src="./src/assets/icons/pattern.svg" />
                 <div class="flex-1">
                   <h3 class="font-medium text-xl">Quran Classes</h3>
-                  <p>
-                    Learn to read and recite the Holy Quran with proper Tajweed
-                  </p>
-                  <h6 class="text-primary-color-one text-sm">
-                    Saturdays 10:00 AM - 12:00 PM
-                  </h6>
+                  <p>Learn to read and recite the Holy Quran with proper Tajweed</p>
+                  <h6 class="text-primary-color-one text-sm">Saturdays 10:00 AM - 12:00 PM</h6>
                 </div>
                 <button class="btn-primary">Register</button>
               </div>
-              <div
-                class="flex items-center justify-between text-gray-900 gap-2"
-              >
-                <img src="./src/assets/icons/pattern.svg" alt="pattern" />
+
+              <div class="flex items-center justify-between text-gray-900 gap-2">
+                <img src="./src/assets/icons/pattern.svg" />
                 <div class="flex-1">
                   <h3 class="font-medium text-xl">Quran Classes</h3>
-                  <p>
-                    Learn to read and recite the Holy Quran with proper Tajweed
-                  </p>
-                  <h6 class="text-primary-color-one text-sm">
-                    Saturdays 10:00 AM - 12:00 PM
-                  </h6>
+                  <p>Learn to read and recite the Holy Quran with proper Tajweed</p>
+                  <h6 class="text-primary-color-one text-sm">Saturdays 10:00 AM - 12:00 PM</h6>
                 </div>
                 <button class="btn-primary">Register</button>
               </div>
-              <div
-                class="flex items-center justify-between text-gray-900 gap-2"
-              >
-                <img src="./src/assets/icons/pattern.svg" alt="pattern" />
+
+              <div class="flex items-center justify-between text-gray-900 gap-2">
+                <img src="./src/assets/icons/pattern.svg" />
                 <div class="flex-1">
                   <h3 class="font-medium text-xl">Quran Classes</h3>
-                  <p>
-                    Learn to read and recite the Holy Quran with proper Tajweed
-                  </p>
-                  <h6 class="text-primary-color-one text-sm">
-                    Saturdays 10:00 AM - 12:00 PM
-                  </h6>
+                  <p>Learn to read and recite the Holy Quran with proper Tajweed</p>
+                  <h6 class="text-primary-color-one text-sm">Saturdays 10:00 AM - 12:00 PM</h6>
                 </div>
                 <button class="btn-primary">Register</button>
               </div>
             </div>
           </div>
-          <div class="w-[48%] bg-white p-7.5 rounded-3xl">
+
+          <div class="w-full md:w-[48%] bg-white p-7.5 rounded-3xl">
             <h3 class="title text-[28px]">Child Classes</h3>
             <div class="flex flex-col my-8 gap-3">
-              <div
-                class="flex items-center justify-between text-gray-900 gap-2"
-              >
-                <img src="./src/assets/icons/pattern.svg" alt="pattern" />
+
+              <div class="flex items-center justify-between text-gray-900 gap-2">
+                <img src="./src/assets/icons/pattern.svg" />
                 <div class="flex-1">
                   <h3 class="font-medium text-xl">Quran Classes</h3>
-                  <p>
-                    Learn to read and recite the Holy Quran with proper Tajweed
-                  </p>
-                  <h6 class="text-primary-color-one text-sm">
-                    Saturdays 10:00 AM - 12:00 PM
-                  </h6>
+                  <p>Learn to read and recite the Holy Quran with proper Tajweed</p>
+                  <h6 class="text-primary-color-one text-sm">Saturdays 10:00 AM - 12:00 PM</h6>
                 </div>
                 <button class="btn-primary">Register</button>
               </div>
-              <div
-                class="flex items-center justify-between text-gray-900 gap-2"
-              >
-                <img src="./src/assets/icons/pattern.svg" alt="pattern" />
+
+              <div class="flex items-center justify-between text-gray-900 gap-2">
+                <img src="./src/assets/icons/pattern.svg" />
                 <div class="flex-1">
                   <h3 class="font-medium text-xl">Quran Classes</h3>
-                  <p>
-                    Learn to read and recite the Holy Quran with proper Tajweed
-                  </p>
-                  <h6 class="text-primary-color-one text-sm">
-                    Saturdays 10:00 AM - 12:00 PM
-                  </h6>
+                  <p>Learn to read and recite the Holy Quran with proper Tajweed</p>
+                  <h6 class="text-primary-color-one text-sm">Saturdays 10:00 AM - 12:00 PM</h6>
                 </div>
                 <button class="btn-primary">Register</button>
               </div>
-              <div
-                class="flex items-center justify-between text-gray-900 gap-2"
-              >
-                <img src="./src/assets/icons/pattern.svg" alt="pattern" />
+
+              <div class="flex items-center justify-between text-gray-900 gap-2">
+                <img src="./src/assets/icons/pattern.svg" />
                 <div class="flex-1">
                   <h3 class="font-medium text-xl">Quran Classes</h3>
-                  <p>
-                    Learn to read and recite the Holy Quran with proper Tajweed
-                  </p>
-                  <h6 class="text-primary-color-one text-sm">
-                    Saturdays 10:00 AM - 12:00 PM
-                  </h6>
+                  <p>Learn to read and recite the Holy Quran with proper Tajweed</p>
+                  <h6 class="text-primary-color-one text-sm">Saturdays 10:00 AM - 12:00 PM</h6>
                 </div>
                 <button class="btn-primary">Register</button>
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- ================== islamicClasses section end ================= -->
+    <!-- ================= islamicClasses section end ================= -->
+
     <!-- ================== Our Services start ================= -->
     <section id="ourServices" class="my-10">
       <h2 class="text-center title">Our Services</h2>
       <div class="container">
         <div
-          class="flex items-center gap-x-[150px] justify-center gap-y-14 my-10 flex-wrap"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center my-10"
         >
-          <div class="w-[318px] text-center flex flex-col gap-3">
-            <div
-              class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto"
-            >
-              <img src="./src/assets/icons/book-open.svg" alt="book" />
+          <!-- 6 service cards -->
+          <div class="w-full text-center flex flex-col gap-3">
+            <div class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto">
+              <img src="./src/assets/icons/book-open.svg" />
             </div>
             <h4 class="title">Islamic Classes</h4>
             <p class="text-gray-600 text-lg">
               Join our community in creating a sacred space for worship,
               learning, and unity. Every donation brings us closer to our goal.
             </p>
-            <a
-              class="btn-primary"
-              href="http://"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn-primary inline-flex gap-2 mx-auto" href="#">
               Read More <img src="./src/assets/icons/book-upload.svg" />
             </a>
           </div>
-          <div class="w-[318px] text-center flex flex-col gap-3">
-            <div
-              class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto"
-            >
-              <img src="./src/assets/icons/book-open.svg" alt="book" />
+
+          <!-- duplicated 5 more items (kept same) -->
+          <!-- COPY x5 -->
+          <div class="w-full text-center flex flex-col gap-3">
+            <div class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto">
+              <img src="./src/assets/icons/book-open.svg" />
             </div>
             <h4 class="title">Islamic Classes</h4>
             <p class="text-gray-600 text-lg">
               Join our community in creating a sacred space for worship,
-              learning, and unity. Every donation brings us closer to our goal.
+              learning, and unity.
             </p>
-            <a
-              class="btn-primary"
-              href="http://"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn-primary inline-flex gap-2 mx-auto" href="#">
               Read More <img src="./src/assets/icons/book-upload.svg" />
             </a>
           </div>
-          <div class="w-[318px] text-center flex flex-col gap-3">
-            <div
-              class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto"
-            >
-              <img src="./src/assets/icons/book-open.svg" alt="book" />
+
+          <div class="w-full text-center flex flex-col gap-3">
+            <div class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto">
+              <img src="./src/assets/icons/book-open.svg" />
             </div>
             <h4 class="title">Islamic Classes</h4>
             <p class="text-gray-600 text-lg">
               Join our community in creating a sacred space for worship,
-              learning, and unity. Every donation brings us closer to our goal.
+              learning, and unity.
             </p>
-            <a
-              class="btn-primary"
-              href="http://"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn-primary inline-flex gap-2 mx-auto" href="#">
               Read More <img src="./src/assets/icons/book-upload.svg" />
             </a>
           </div>
-          <div class="w-[318px] text-center flex flex-col gap-3">
-            <div
-              class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto"
-            >
-              <img src="./src/assets/icons/book-open.svg" alt="book" />
+
+          <div class="w-full text-center flex flex-col gap-3">
+            <div class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto">
+              <img src="./src/assets/icons/book-open.svg" />
             </div>
             <h4 class="title">Islamic Classes</h4>
             <p class="text-gray-600 text-lg">
               Join our community in creating a sacred space for worship,
-              learning, and unity. Every donation brings us closer to our goal.
+              learning, and unity.
             </p>
-            <a
-              class="btn-primary"
-              href="http://"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn-primary inline-flex gap-2 mx-auto" href="#">
               Read More <img src="./src/assets/icons/book-upload.svg" />
             </a>
           </div>
-          <div class="w-[318px] text-center flex flex-col gap-3">
-            <div
-              class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto"
-            >
-              <img src="./src/assets/icons/book-open.svg" alt="book" />
+
+          <div class="w-full text-center flex flex-col gap-3">
+            <div class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto">
+              <img src="./src/assets/icons/book-open.svg" />
             </div>
             <h4 class="title">Islamic Classes</h4>
             <p class="text-gray-600 text-lg">
               Join our community in creating a sacred space for worship,
-              learning, and unity. Every donation brings us closer to our goal.
+              learning, and unity.
             </p>
-            <a
-              class="btn-primary"
-              href="http://"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn-primary inline-flex gap-2 mx-auto" href="#">
               Read More <img src="./src/assets/icons/book-upload.svg" />
             </a>
           </div>
-          <div class="w-[318px] text-center flex flex-col gap-3">
-            <div
-              class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto"
-            >
-              <img src="./src/assets/icons/book-open.svg" alt="book" />
+
+          <div class="w-full text-center flex flex-col gap-3">
+            <div class="bg-gray-300 inline-flex justify-center items-center w-28 h-28 rounded-full m-auto">
+              <img src="./src/assets/icons/book-open.svg" />
             </div>
             <h4 class="title">Islamic Classes</h4>
             <p class="text-gray-600 text-lg">
               Join our community in creating a sacred space for worship,
-              learning, and unity. Every donation brings us closer to our goal.
+              learning, and unity.
             </p>
-            <a
-              class="btn-primary"
-              href="http://"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn-primary inline-flex gap-2 mx-auto" href="#">
               Read More <img src="./src/assets/icons/book-upload.svg" />
             </a>
           </div>
         </div>
       </div>
     </section>
+
     <!-- ================== Gallery Section Start ================= -->
     <section id="gallery" class="my-20">
       <h2 class="title text-center">Community Gallery</h2>
       <div class="container">
         <div class="flex items-center flex-wrap justify-center gap-3 my-10">
-          <div class="w-[32%] rounded-xl relative overflow-hidden group">
+
+          <div class="w-full sm:w-[48%] lg:w-[32%] rounded-xl relative overflow-hidden group">
             <div
               class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center"
             >
               <img src="./src//assets/icons/eye.svg" />
               Eid Ui Fitr
             </div>
-            <img
-              src="./src/assets/images/gallery1.png"
-              alt="gallery"
-              class="object-cover w-full h-full"
-            />
+            <img src="./src/assets/images/gallery1.png" class="object-cover w-full h-full" />
           </div>
-          <div class="w-[32%] rounded-xl relative overflow-hidden group">
-            <div
-              class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center"
-            >
+
+          <!-- repeat others -->
+          <div class="w-full sm:w-[48%] lg:w-[32%] rounded-xl relative overflow-hidden group">
+            <div class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center">
               <img src="./src//assets/icons/eye.svg" />
               Eid Ui Fitr
             </div>
-            <img
-              src="./src/assets/images/gallery1.png"
-              alt="gallery"
-              class="object-cover w-full h-full"
-            />
+            <img src="./src/assets/images/gallery1.png" class="object-cover w-full h-full" />
           </div>
-          <div class="w-[32%] rounded-xl relative overflow-hidden group">
-            <div
-              class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center"
-            >
+
+          <div class="w-full sm:w-[48%] lg:w-[32%] rounded-xl relative overflow-hidden group">
+            <div class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center">
               <img src="./src//assets/icons/eye.svg" />
               Eid Ui Fitr
             </div>
-            <img
-              src="./src/assets/images/gallery1.png"
-              alt="gallery"
-              class="object-cover w-full h-full"
-            />
+            <img src="./src/assets/images/gallery1.png" class="object-cover w-full h-full" />
           </div>
-          <div class="w-[32%] rounded-xl relative overflow-hidden group">
-            <div
-              class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center"
-            >
+
+          <div class="w-full sm:w-[48%] lg:w-[32%] rounded-xl relative overflow-hidden group">
+            <div class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center">
               <img src="./src//assets/icons/eye.svg" />
               Eid Ui Fitr
             </div>
-            <img
-              src="./src/assets/images/gallery1.png"
-              alt="gallery"
-              class="object-cover w-full h-full"
-            />
+            <img src="./src/assets/images/gallery1.png" class="object-cover w-full h-full" />
           </div>
-          <div class="w-[32%] rounded-xl relative overflow-hidden group">
-            <div
-              class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center"
-            >
+
+          <div class="w-full sm:w-[48%] lg:w-[32%] rounded-xl relative overflow-hidden group">
+            <div class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center">
               <img src="./src//assets/icons/eye.svg" />
               Eid Ui Fitr
             </div>
-            <img
-              src="./src/assets/images/gallery1.png"
-              alt="gallery"
-              class="object-cover w-full h-full"
-            />
+            <img src="./src/assets/images/gallery1.png" class="object-cover w-full h-full" />
           </div>
-          <div class="w-[32%] rounded-xl relative overflow-hidden group">
-            <div
-              class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center"
-            >
+
+          <div class="w-full sm:w-[48%] lg:w-[32%] rounded-xl relative overflow-hidden group">
+            <div class="group-hover:w-full transition-all duration-500 absolute w-0 h-full bg-black/80 flex flex-col gap-1 text-white justify-center items-center">
               <img src="./src//assets/icons/eye.svg" />
               Eid Ui Fitr
             </div>
-            <img
-              src="./src/assets/images/gallery1.png"
-              alt="gallery"
-              class="object-cover w-full h-full"
-            />
+            <img src="./src/assets/images/gallery1.png" class="object-cover w-full h-full" />
           </div>
+
         </div>
+
         <div class="flex justify-center items-center">
-          <a
-            class="btn-primary inline-flex"
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View All <img src="./src/assets/icons/arrow.svg" alt="arrow"
-          /></a>
+          <a class="btn-primary inline-flex" href="#">
+            View All <img src="./src/assets/icons/arrow.svg" />
+          </a>
         </div>
       </div>
     </section>
     <!-- ================== Gallery section end ================= -->
+
     <!-- ================== Contact Section Start ================= -->
     <section
       id="contact"
       class="py-[143px]"
-      style="
-        background-image: url(./src/assets/bgImages/islamicClassesBg.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      "
+      style="background-image: url(./src/assets/bgImages/islamicClassesBg.png); background-size: cover;"
     >
       <h2 class="title text-center">Join Our Community</h2>
       <div class="container">
         <div class="flex justify-center items-center my-10">
           <form
-            action=""
-            class="bg-gray-100 border border-gray-400 w-[760px] p-5 rounded-xl flex flex-col gap-3"
+            class="bg-gray-100 border border-gray-400 w-full max-w-[760px] p-5 rounded-xl flex flex-col gap-3"
           >
             <div class="flex flex-col gap-3 font-medium text-gray-600">
-              <label for="firstName">First Name *</label>
-              <input
-                type="text"
-                id="firstName"
-                placeholder="Enter your first name"
-                class="border border-gray-400 rounded-xl px-2 py-3"
-              />
+              <label>First Name *</label>
+              <input type="text" class="border border-gray-400 rounded-xl px-2 py-3" placeholder="Enter your first name" />
             </div>
+
             <div class="flex flex-col gap-3 font-medium text-gray-600">
-              <label for="lastName">Last Name *</label>
-              <input
-                type="text"
-                id="lastName"
-                placeholder="Enter your last name"
-                class="border border-gray-400 rounded-xl px-2 py-3"
-              />
+              <label>Last Name *</label>
+              <input type="text" class="border border-gray-400 rounded-xl px-2 py-3" placeholder="Enter your last name" />
             </div>
+
             <div class="flex flex-col gap-3 font-medium text-gray-600">
-              <label for="email">Email *</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                class="border border-gray-400 rounded-xl px-2 py-3"
-              />
+              <label>Email *</label>
+              <input type="email" class="border border-gray-400 rounded-xl px-2 py-3" placeholder="Enter your email" />
             </div>
+
             <div class="flex flex-col gap-3 font-medium text-gray-600">
-              <label for="phoneNumber">Phone Number * *</label>
-              <input
-                type="tel"
-                id="phoneNumber"
-                placeholder="Enter your phone number"
-                class="border border-gray-400 rounded-xl px-2 py-3"
-              />
+              <label>Phone Number *</label>
+              <input type="tel" class="border border-gray-400 rounded-xl px-2 py-3" placeholder="Enter your phone number" />
             </div>
-            <button type="submit" class="btn-primary">
+
+            <button class="btn-primary inline-flex gap-2">
               Submit <img src="./src/assets/icons/arrow.svg" />
             </button>
           </form>
@@ -595,57 +438,57 @@
       </div>
     </section>
     <!-- ================== Contact Section End ================= -->
+
     <!-- ================== Footer Section Start ================= -->
     <footer class="bg-primary-color-three py-[45px] text-white">
       <div class="container">
-        <div class="flex justify-between">
+        <div class="flex flex-col md:flex-row justify-between gap-10">
+          <!-- footer left -->
           <div class="flex flex-col gap-3">
             <h2 class="font-bold text-2xl">BICC FINLAND</h2>
-            <p class="text-lg w-[327px]">
+            <p class="text-lg max-w-[327px]">
               Bangladesh Islamic Cultural Centre - Building a stronger Muslim
               community through faith, education, and unity.
             </p>
+
             <ul class="flex flex-col font-medium text-lg gap-1">
               <li class="flex items-center gap-2">
-                <img src="./src/assets/icons/phone.svg" alt="phone" /><a
-                  href="tel:+(555) 123-4567"
-                  >(555) 123-4567</a
-                >
+                <img src="./src/assets/icons/phone.svg" />
+                <a href="tel:+(555) 123-4567">(555) 123-4567</a>
               </li>
+
               <li class="flex items-center gap-2">
-                <img src="./src/assets/icons/home.svg" alt="location" />
+                <img src="./src/assets/icons/home.svg" />
                 <address>Malminkaari 9 A (3rd floor)</address>
               </li>
+
               <li class="flex items-center gap-2">
-                <img src="./src/assets/icons/mail.svg" alt="mail" />
-                <a href="mailto: info@biccfinland.org"> info@biccfinland.org</a>
+                <img src="./src/assets/icons/mail.svg" />
+                <a href="mailto:info@biccfinland.org">info@biccfinland.org</a>
               </li>
             </ul>
           </div>
+
+          <!-- footer links -->
           <div>
             <h2 class="font-bold text-2xl">Quick Links</h2>
-            <ul class="flex gap-1 flex-col my-2.5 text-lg">
-              <li>
-                <a href="/">About</a1>
-              </li>
-              <li>
-                <a href="/">Services</a2>
-              </li>
-              <li>
-                <a href="/">Classes</a3>
-              </li>
-              <li>
-                <a href="/">Gallery</a4>
-              </li>
-              <li>
-                <a href="/">Community</a5>
-              </li>
+            <ul class="flex flex-col my-2.5 text-lg gap-1">
+              <li><a href="/">About</a></li>
+              <li><a href="/">Services</a></li>
+              <li><a href="/">Classes</a></li>
+              <li><a href="/">Gallery</a></li>
+              <li><a href="/">Community</a></li>
             </ul>
           </div>
-          <div >
+
+          <!-- footer right block -->
+          <div>
             <h2 class="font-bold text-2xl">Support Our Mission</h2>
-            <p class="text-lg w-[293px] my-2">Help us build our permanent mosque and serve the community better.</p>
-            <button class="btn-primary ">
+            <p class="text-lg max-w-[293px] my-2">
+              Help us build our permanent mosque and serve the community better.
+            </p>
+
+            <button class="btn-primary flex gap-2">
               Donate Us <img src="./src/assets/icons/heart-handshake.svg" />
             </button>
           </div>
@@ -653,26 +496,21 @@
       </div>
     </footer>
     <!-- ================== Footer Section End ================= -->
+
     <!-- ================== Social Links Start ================= -->
-    <div id="socialLInks" class="fixed top-1/2 right-4 -translate-y-1/2">
+    <div id="socialLInks" class="fixed top-1/2 right-4 -translate-y-1/2 hidden md:block">
       <ul class="flex flex-col justify-center items-end gap-3">
         <li>
-          <a href="">
-            <img src="./src/assets/icons/twitter.svg" alt="twitter" />
-          </a>
+          <a><img src="./src/assets/icons/twitter.svg" /></a>
         </li>
         <li>
-          <a href="">
-            <img src="./src/assets/icons/facebook.svg" alt="facebook" />
-          </a>
+          <a><img src="./src/assets/icons/facebook.svg" /></a>
         </li>
         <li>
-          <a href="">
-            <img src="./src/assets/icons/whatsapp.svg" alt="whatsapp" />
-          </a>
+          <a><img src="./src/assets/icons/whatsapp.svg" /></a>
         </li>
         <li>
-          <button class="btn-primary">
+          <button class="btn-primary flex gap-2">
             Donate Us <img src="./src/assets/icons/heart-handshake.svg" />
           </button>
         </li>
