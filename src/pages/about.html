@@ -4,100 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../css/output.css" rel="stylesheet" />
+    <title>BICC FINLAND</title>
   </head>
+
   <body>
-    <nav class="my-2">
+    <!-- ================== NAVBAR ================== -->
+    <nav class="py-3 shadow-sm bg-white">
       <div class="container">
         <div
-          class="flex items-center justify-between p-4 border border-gray-300 rounded-md"
+          class="flex flex-col md:flex-row items-center justify-between p-4 border border-gray-300 rounded-md gap-4"
         >
-          <div>
-            <img src="../../public/navLogo.png" alt="BICC FINLAND" />
-          </div>
+          <!-- Logo -->
+          <img
+            src="../../public/navLogo.png"
+            class="w-[150px] md:w-[180px]"
+            alt="BICC FINLAND"
+          />
+
+          <!-- Menu -->
           <menu>
             <ul
-              class="flex uppercase gap-4 items-center justify-center font-medium"
+              class="flex flex-wrap md:flex-nowrap uppercase gap-4 justify-center font-medium text-sm md:text-base"
             >
-              <li>
-                <a class="active" href="/">HOME</a>
-              </li>
-              <li>
-                <a href="/prayers">PRAYER’S</a>
-              </li>
-              <li>
-                <a href="/time">TIME</a>
-              </li>
-              <li>
-                <a href="/classes">CLASSES</a>
-              </li>
-              <li>
-                <a href="/gallery">GALLERY</a>
-              </li>
-              <li>
-                <a href="/services">SERVICES</a>
-              </li>
-              <li>
-                <a href="/community">COMMUNITY</a>
-              </li>
+              <li><a class="active" href="/">HOME</a></li>
+              <li><a href="/prayers">PRAYER’S</a></li>
+              <li><a href="/time">TIME</a></li>
+              <li><a href="/classes">CLASSES</a></li>
+              <li><a href="/gallery">GALLERY</a></li>
+              <li><a href="/services">SERVICES</a></li>
+              <li><a href="/community">COMMUNITY</a></li>
             </ul>
           </menu>
-          <div>
-            <button class="btn-primary">
-              Donate Us <img src="../assets/icons/heart-handshake.svg" />
-            </button>
-          </div>
+
+          <!-- Donation Button -->
+          <button class="btn-primary flex items-center gap-2">
+            Donate Us <img src="../assets/icons/heart-handshake.svg" />
+          </button>
         </div>
       </div>
     </nav>
-    <section id="pageTitle">
+
+    <!-- ================== PAGE TITLE ================== -->
+    <section id="pageTitle" class="mt-10">
       <div class="container">
         <div
-          class="relative bg-center bg-cover bg-no-repeat pt-[369px] pb-6 px-3 mt-10 rounded-xl text-white flex flex-col gap-1 justify-end items-start"
+          class="relative bg-center bg-cover bg-no-repeat pt-[200px] md:pt-[369px] pb-6 px-4 rounded-xl text-white flex flex-col gap-1 justify-end"
           style="
             background-image: url(../assets/bgImages/aboutBg.png);
             background-color: rgba(0, 0, 0, 0.6);
             background-blend-mode: multiply;
           "
         >
-          <h2 class="text-sm">Home/About Us</h2>
-          <h3 class="font-medium text-[32px]">About Us</h3>
+          <h2 class="text-sm md:text-base">Home / About Us</h2>
+          <h3 class="text-2xl md:text-[32px] font-medium">About Us</h3>
         </div>
       </div>
     </section>
 
-    <section id="missionAndVission">
-      <h2 class="text-center title mt-[70px]">Our Mission And Vision</h2>
+    <!-- ================== Mission & Vision ================== -->
+    <section id="missionAndVission" class="my-[70px]">
+      <h2 class="text-center title text-3xl md:text-4xl mb-10">
+        Our Mission And Vision
+      </h2>
+
       <div class="container">
-        <div class="flex items-center justify-between my-10">
-          <div class="w-[48%]">
-            <p class="text-lg text-gray-600 leading-7 w-[559px]">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-10"
+        >
+          <!-- Left Text -->
+          <div class="w-full md:w-[48%]">
+            <p class="text-gray-600 leading-7 text-base md:text-lg">
               Lorem Foundation is a non-political and non-profit
               service-oriented organization registered with the government,
-              dedicated to education, humanitarian aid, and the overall welfare
-              of society. Its registration number is L-2025/001. It was founded
-              in 2017 by a group of visionary individuals committed to serving
-              humanity, with the Chairman overseeing its core operations and
-              development. The organization follows the noble ideals of
-              compassion, peace, and service to mankind.
+              dedicated to education, humanitarian aid, and the welfare of
+              society. Founded in 2017, the organization operates with a mission
+              of compassion, peace, and service to mankind, under the guidance
+              of its leadership.
             </p>
           </div>
-          <div class="relative overflow-hidden w-[48%]">
+
+          <!-- Right Video -->
+          <div class="relative overflow-hidden w-full md:w-[48%]">
             <div
-              class="absolute w-full h-full top-0 left-0 bg-black/50 rounded-3xl flex justify-center items-center"
+              class="absolute inset-0 bg-black/50 rounded-3xl flex justify-center items-center"
             >
               <button
-                class="bg-white flex justify-center items-center rounded-full w-18 h-18"
+                class="bg-white rounded-full w-16 h-16 flex justify-center items-center shadow-md"
               >
-                <img src="../assets/icons/play.svg" />
+                <img src="../assets/icons/play.svg" class="w-6" />
               </button>
             </div>
+
             <iframe
-              class="rounded-3xl w-full h-[368px]"
-              src="https://www.youtube.com/embed/tQHAwV9B8hQ?si=s_9wLIN-0NoIqHVJ"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
+              class="rounded-3xl w-full h-[250px] md:h-[368px]"
+              src="https://www.youtube.com/embed/tQHAwV9B8hQ"
               allowfullscreen
             ></iframe>
           </div>
@@ -105,25 +105,138 @@
       </div>
     </section>
 
-    <div id="socialLInks" class="fixed top-1/2 right-4 -translate-y-1/2">
-      <ul class="flex flex-col justify-center items-end gap-3">
+    <!-- ================== Contact Section ================== -->
+    <section
+      id="contact"
+      class="py-20 md:py-[143px] bg-cover bg-center"
+      style="background-image: url(../assets/bgImages/islamicClassesBg.png)"
+    >
+      <h2 class="title text-center text-3xl md:text-4xl">Join Our Community</h2>
+
+      <div class="container">
+        <div class="flex justify-center items-center my-10">
+          <form
+            class="bg-gray-100 border border-gray-400 w-full max-w-[760px] p-5 md:p-7 rounded-xl flex flex-col gap-4"
+          >
+            <!-- Inputs -->
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>First Name *</label>
+              <input
+                type="text"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your first name"
+              />
+            </div>
+
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>Last Name *</label>
+              <input
+                type="text"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your last name"
+              />
+            </div>
+
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>Email *</label>
+              <input
+                type="email"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>Phone Number *</label>
+              <input
+                type="tel"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            <button class="btn-primary flex gap-2 justify-center">
+              Submit <img src="../assets/icons/arrow.svg" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== FOOTER ================== -->
+    <footer class="bg-primary-color-three py-[45px] text-white">
+      <div class="container">
+        <div class="flex flex-col md:flex-row justify-between gap-10">
+          <!-- Left -->
+          <div class="flex flex-col gap-3">
+            <h2 class="font-bold text-2xl">BICC FINLAND</h2>
+            <p class="text-lg max-w-[327px]">
+              Bangladesh Islamic Cultural Centre - Building a stronger Muslim
+              community through faith, education, and unity.
+            </p>
+
+            <ul class="font-medium text-lg flex flex-col gap-1">
+              <li class="flex items-center gap-2">
+                <img src="../assets/icons/phone.svg" />
+                <a href="tel:+5551234567">(555) 123-4567</a>
+              </li>
+
+              <li class="flex items-center gap-2">
+                <img src="../assets/icons/home.svg" />
+                <address>Malminkaari 9 A (3rd floor)</address>
+              </li>
+
+              <li class="flex items-center gap-2">
+                <img src="../assets/icons/mail.svg" />
+                <a href="mailto:info@biccfinland.org">info@biccfinland.org</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h2 class="font-bold text-2xl">Quick Links</h2>
+            <ul class="text-lg flex flex-col gap-1 my-2.5">
+              <li><a href="/">About</a></li>
+              <li><a href="/">Services</a></li>
+              <li><a href="/">Classes</a></li>
+              <li><a href="/">Gallery</a></li>
+              <li><a href="/">Community</a></li>
+            </ul>
+          </div>
+
+          <!-- Right -->
+          <div>
+            <h2 class="font-bold text-2xl">Support Our Mission</h2>
+            <p class="text-lg max-w-[293px] my-2">
+              Help us build our permanent mosque and serve the community better.
+            </p>
+
+            <button class="btn-primary flex gap-2">
+              Donate Us <img src="../assets/icons/heart-handshake.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================== SOCIAL LINKS ================== -->
+    <div
+      id="socialLInks"
+      class="fixed top-1/2 right-4 -translate-y-1/2 hidden md:block"
+    >
+      <ul class="flex flex-col items-end gap-3">
         <li>
-          <a href="">
-            <img src="../assets/icons/twitter.svg" alt="twitter" />
-          </a>
+          <a><img src="../assets/icons/twitter.svg" /></a>
         </li>
         <li>
-          <a href="">
-            <img src="../assets/icons/facebook.svg" alt="facebook" />
-          </a>
+          <a><img src="../assets/icons/facebook.svg" /></a>
         </li>
         <li>
-          <a href="">
-            <img src="../assets/icons/whatsapp.svg" alt="whatsapp" />
-          </a>
+          <a><img src="../assets/icons/whatsapp.svg" /></a>
         </li>
         <li>
-          <button class="btn-primary">
+          <button class="btn-primary flex gap-2">
             Donate Us <img src="../assets/icons/heart-handshake.svg" />
           </button>
         </li>
