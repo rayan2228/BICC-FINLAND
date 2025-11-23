@@ -593,6 +593,7 @@
     </section>
 
     <!-- ================== FOOTER ================== -->
+
     <footer class="bg-primary-color-three py-[45px] text-white">
       <div class="container">
         <div class="flex flex-col md:flex-row justify-between gap-10">
@@ -670,6 +671,58 @@
           </button>
         </li>
       </ul>
+    </div>
+
+    <div
+      id="registerModal"
+      class="absolute top-0 left-0 bg-gray-200/50 w-dvw h-dvh z-30 flex justify-center items-center"
+    >
+      <div class="w-[800px] my-10">
+        <form
+          class="bg-gray-100 border border-gray-400 w-full max-w-[760px] p-5 md:p-7 rounded-xl flex flex-col gap-4"
+        >
+          <!-- Inputs -->
+          <div class="flex flex-col gap-2 font-medium text-gray-700">
+            <label>First Name *</label>
+            <input
+              type="text"
+              class="border border-gray-400 rounded-xl px-3 py-3"
+              placeholder="Enter your first name"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2 font-medium text-gray-700">
+            <label>Last Name *</label>
+            <input
+              type="text"
+              class="border border-gray-400 rounded-xl px-3 py-3"
+              placeholder="Enter your last name"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2 font-medium text-gray-700">
+            <label>Email *</label>
+            <input
+              type="email"
+              class="border border-gray-400 rounded-xl px-3 py-3"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2 font-medium text-gray-700">
+            <label>Phone Number *</label>
+            <input
+              type="tel"
+              class="border border-gray-400 rounded-xl px-3 py-3"
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <button class="btn-primary flex gap-2 justify-center">
+            Submit <img src="../assets/icons/arrow.svg" />
+          </button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

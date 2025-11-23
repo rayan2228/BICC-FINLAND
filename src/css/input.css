@@ -18,6 +18,8 @@
 
 body {
   font-family: var(--font-roboto);
+  position: relative;
+  overflow-x: hidden;
 }
 
 button {
