@@ -1,15 +1,35 @@
+// Cache DOM elements
 const tabButtons = Array.from(document.querySelector(".tab-btn").children);
 const tabContents = document.querySelectorAll(".tab-content");
-const donateElm = Array.from(document.getElementsByClassName("donate"));
+const donateElm = document.querySelectorAll(".donate");
+const registerElm = document.querySelectorAll(".registerbtn");
+const paymentModal = document.getElementById("paymentModal");
+const registerModal = document.getElementById("registerModal");
 
-donateElm.forEach((elm) => {
-  elm.addEventListener("click", () => {
-    window.scrollTo(0, 0);
-    document.body.style.overflow = "hidden";
-    paymentModal.classList.replace("hidden", "flex");
-  });
+// Utility function to open modal
+const openModal = (modal) => {
+  window.scrollTo(0, 0);
+  document.body.style.overflow = "hidden";
+  modal.classList.replace("hidden", "flex");
+};
+
+// Utility function to close modal
+const closeModal = (modal) => {
+  modal.classList.replace("flex", "hidden");
+  document.body.style.overflow = "auto";
+};
+
+// Register button event listeners
+registerElm.forEach((elm) => {
+  elm.addEventListener("click", () => openModal(registerModal));
 });
 
+// Donate button event listeners
+donateElm.forEach((elm) => {
+  elm.addEventListener("click", () => openModal(paymentModal));
+});
+
+// Tab switching functionality
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const tabId = button.getAttribute("data-tab");
@@ -28,12 +48,12 @@ tabButtons.forEach((button) => {
   });
 });
 
-// Close modal functionality
-const paymentModal = document.getElementById("paymentModal");
-
-// Close modal when clicking outside
-paymentModal.addEventListener("click", (e) => {
-  if (e.target === paymentModal) {
-    paymentModal.style.display = "none";
-  }
+// Close modals when clicking outside
+const modals = [paymentModal, registerModal];
+modals.forEach((modal) => {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal(modal);
+    }
+  });
 });
