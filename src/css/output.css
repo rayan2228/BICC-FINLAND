@@ -7,8 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -304,6 +302,12 @@
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
   }
+  .block {
+    display: block;
+  }
+  .contents {
+    display: contents;
+  }
   .flex {
     display: flex;
   }
@@ -318,6 +322,9 @@
   }
   .h-1\.5 {
     height: calc(var(--spacing) * 1.5);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
@@ -343,6 +350,9 @@
   .w-0 {
     width: calc(var(--spacing) * 0);
   }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
@@ -358,14 +368,8 @@
   .w-\[27px\] {
     width: 27px;
   }
-  .w-\[50\%\] {
-    width: 50%;
-  }
   .w-\[60\%\] {
     width: 60%;
-  }
-  .w-\[80\%\] {
-    width: 80%;
   }
   .w-\[150px\] {
     width: 150px;
@@ -443,9 +447,6 @@
   .justify-end {
     justify-content: flex-end;
   }
-  .gap-0 {
-    gap: calc(var(--spacing) * 0);
-  }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
@@ -495,17 +496,11 @@
   .border-gray-400 {
     border-color: var(--color-gray-400);
   }
-  .bg-\[\#999898\] {
-    background-color: #999898;
-  }
   .bg-\[\#EBF5EB\] {
     background-color: #EBF5EB;
   }
   .bg-\[\#F8FAFC\] {
     background-color: #F8FAFC;
-  }
-  .bg-\[F8FAFC\] {
-    background-color: F8FAFC;
   }
   .bg-black\/50 {
     background-color: color-mix(in srgb, #000 50%, transparent);
@@ -519,37 +514,13 @@
       background-color: color-mix(in oklab, var(--color-black) 80%, transparent);
     }
   }
-  .bg-gray-50 {
-    background-color: var(--color-gray-50);
-  }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
-  }
-  .bg-gray-200 {
-    background-color: var(--color-gray-200);
-  }
-  .bg-gray-200\/0 {
-    background-color: color-mix(in srgb, oklch(92.8% 0.006 264.531) 0%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-gray-200) 0%, transparent);
-    }
   }
   .bg-gray-200\/50 {
     background-color: color-mix(in srgb, oklch(92.8% 0.006 264.531) 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-gray-200) 50%, transparent);
-    }
-  }
-  .bg-gray-200\/80 {
-    background-color: color-mix(in srgb, oklch(92.8% 0.006 264.531) 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-gray-200) 80%, transparent);
-    }
-  }
-  .bg-gray-200\/90 {
-    background-color: color-mix(in srgb, oklch(92.8% 0.006 264.531) 90%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-gray-200) 90%, transparent);
     }
   }
   .bg-gray-300 {
@@ -563,9 +534,6 @@
   }
   .bg-primary-color-three {
     background-color: var(--primary-color-three);
-  }
-  .bg-red-400 {
-    background-color: var(--color-red-400);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -950,6 +918,17 @@ button {
     padding-block: calc(var(--spacing) * 3);
     color: var(--color-white);
   }
+  .btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 2);
+    border-radius: var(--radius-xl);
+    background-color: var(--color-white);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 3);
+    color: var(--color-gray-600);
+  }
   .title {
     font-size: 32px;
     --tw-font-weight: var(--font-weight-medium);
@@ -977,6 +956,23 @@ button {
     background-color: var(--color-white);
     padding-block: calc(var(--spacing) * 3.5);
     color: var(--primary-color-one);
+  }
+  .tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  .tab-content.modal-active {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 @layer utilities {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../css/output.css" rel="stylesheet" />
+    <script src="../js/script.js" defer></script>
   </head>
   <body>
     <!-- ================= nav section start =================  -->
@@ -35,7 +36,7 @@
           </menu>
 
           <!-- Donation Button -->
-          <button class="btn-primary flex items-center gap-2">
+          <button class="btn-primary flex items-center gap-2 donate">
             Donate Us <img src="../assets/icons/heart-handshake.svg" />
           </button>
         </div>
@@ -642,7 +643,7 @@
               Help us build our permanent mosque and serve the community better.
             </p>
 
-            <button class="btn-primary flex gap-2">
+            <button class="btn-primary flex gap-2 donate">
               Donate Us <img src="../assets/icons/heart-handshake.svg" />
             </button>
           </div>
@@ -665,8 +666,7 @@
         <li>
           <a><img src="../assets/icons/whatsapp.svg" /></a>
         </li>
-        <li>
-          <button class="btn-primary flex gap-2">
+          <button class="btn-primary flex gap-2 donate">
             Donate Us <img src="../assets/icons/heart-handshake.svg" />
           </button>
         </li>
@@ -727,121 +727,134 @@
 
     <div
       id="paymentModal"
-      class="absolute top-0 left-0 bg-gray-200/50 w-dvw h-dvh z-30 flex justify-center items-center"
+      class="absolute top-0 left-0 bg-gray-200/50 w-dvw h-dvh z-30 justify-center items-center hidden"
     >
       <div
         class="w-[800px] my-10 bg-[#F8FAFC] border border-gray-400 max-w-[760px] p-5 md:p-7 rounded-xl flex flex-col gap-4"
       >
-        <div class="flex justify-between">
-          <button class="btn-primary bg-white text-gray-600">
-            QR CODE PROCESS
-          </button>
-          <button class="btn-primary bg-white text-gray-600">
+        <div class="flex justify-between tab-btn">
+          <button class="btn-primary" data-tab="qr">QR CODE PROCESS</button>
+          <button class="btn-secondary" data-tab="mobile">
             MOBILE BANKING
           </button>
-          <button class="btn-primary">MANUAL PROCESS</button>
-        </div>
-        <!-- <form
-          class=" flex flex-col gap-4"
-        >
-          <div class="flex flex-col gap-2 font-medium text-gray-700">
-            <label>First Name *</label>
-            <input
-              type="text"
-              class="border border-gray-400 rounded-xl px-3 py-3"
-              placeholder="Enter your first name"
-            />
-          </div>
-
-          <div class="flex flex-col gap-2 font-medium text-gray-700">
-            <label>Last Name *</label>
-            <input
-              type="text"
-              class="border border-gray-400 rounded-xl px-3 py-3"
-              placeholder="Enter your last name"
-            />
-          </div>
-
-          <div class="flex flex-col gap-2 font-medium text-gray-700">
-            <label>Email *</label>
-            <input
-              type="email"
-              class="border border-gray-400 rounded-xl px-3 py-3"
-              placeholder="Enter your email"
-            />
-          </div>
-
-          <div class="flex flex-col gap-2 font-medium text-gray-700">
-            <label>Phone Number *</label>
-            <input
-              type="tel"
-              class="border border-gray-400 rounded-xl px-3 py-3"
-              placeholder="Enter your phone number"
-            />
-          </div>
-
-          <button class="btn-primary flex gap-2 justify-center">
-            Submit <img src="../assets/icons/arrow.svg" />
+          <button class="btn-secondary" data-tab="manual">
+            MANUAL PROCESS
           </button>
-        </form> -->
+        </div>
+
+        <div id="manual" class="tab-content modal-active">
+          <form class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>First Name *</label>
+              <input
+                type="text"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your first name"
+              />
+            </div>
+
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>Last Name *</label>
+              <input
+                type="text"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your last name"
+              />
+            </div>
+
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>Email *</label>
+              <input
+                type="email"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>Phone Number *</label>
+              <input
+                type="tel"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            <button class="btn-primary flex gap-2 justify-center">
+              Submit <img src="../assets/icons/arrow.svg" />
+            </button>
+          </form>
+        </div>
+
         <!-- qr code -->
-        <!-- <div class="flex justify-center flex-col  w-full items-center">
-          <h2 class="font-medium text-[48px] text-gray-600">Payment Here</h2>
-          <div class="w-[60%] flex justify-center items-center">
-            <img src="../assets/images/qr.png" alt="qr" />
+        <div id="qr" class="tab-content">
+          <div class="flex justify-center flex-col w-full items-center">
+            <h2 class="font-medium text-[48px] text-gray-600">Payment Here</h2>
+            <div class="w-[60%] flex justify-center items-center">
+              <img src="../assets/images/qr.png" alt="qr" />
+            </div>
           </div>
-        </div> -->
+        </div>
 
         <!-- banking -->
-        <form class="flex flex-col gap-4">
-          <div class="flex flex-col gap-2 font-medium text-gray-700">
-            <label>First Name *</label>
-            <input
-              type="text"
-              class="border border-gray-400 rounded-xl px-3 py-3"
-              placeholder="Enter your first name"
-            />
-          </div>
+        <div id="mobile" class="tab-content">
+          <form class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>First Name *</label>
+              <input
+                type="text"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your first name"
+              />
+            </div>
 
-          <div class="flex flex-col gap-2 font-medium text-gray-700">
-            <label>Last Name *</label>
-            <input
-              type="text"
-              class="border border-gray-400 rounded-xl px-3 py-3"
-              placeholder="Enter your last name"
-            />
-          </div>
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>Last Name *</label>
+              <input
+                type="text"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your last name"
+              />
+            </div>
 
-          <div class="flex flex-col gap-2 font-medium text-gray-700">
-            <label>Email *</label>
-            <input
-              type="email"
-              class="border border-gray-400 rounded-xl px-3 py-3"
-              placeholder="Enter your email"
-            />
-          </div>
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>Email *</label>
+              <input
+                type="email"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your email"
+              />
+            </div>
 
-          <div class="flex flex-col gap-2 font-medium text-gray-700">
-            <label>Phone Number *</label>
-            <input
-              type="tel"
-              class="border border-gray-400 rounded-xl px-3 py-3"
-              placeholder="Enter your phone number"
-            />
-          </div>
-          <div class="flex flex-col gap-2 font-medium text-gray-700">
-            <label>Payment Method *</label>
-            <input
-              type="checkbox"
-              class="border border-gray-400 rounded-xl px-3 py-3"
-              placeholder="Enter your phone number"
-            />
-          </div>
+            <div class="flex flex-col gap-2 font-medium text-gray-700">
+              <label>Phone Number *</label>
+              <input
+                type="tel"
+                class="border border-gray-400 rounded-xl px-3 py-3"
+                placeholder="Enter your phone number"
+              />
+            </div>
 
-          <button class="btn-primary flex gap-2 justify-center">
-            Submit <img src="../assets/icons/arrow.svg" />
-          </button>
-        </form>
+            <div
+              class="flex flex-col items-start gap-2 font-medium text-gray-700"
+            >
+              <label>Payment Method *</label>
+              <div
+                class="border border-gray-400 rounded-xl px-3 py-3 w-full flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2">
+                  <input type="radio" class="w-5 h-5" />
+                  <h3>Finland Mobile Banking</h3>
+                </div>
+                <img src="../assets/images/payment.png" alt="payment" />
+              </div>
+            </div>
+
+            <button class="btn-primary flex gap-2 justify-center">
+              Submit <img src="../assets/icons/arrow.svg" />
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </body>

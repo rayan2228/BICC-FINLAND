@@ -39,6 +39,9 @@ button {
   .btn-primary {
     @apply flex items-center justify-center bg-primary-color-one text-white px-4 py-3 rounded-xl gap-2;
   }
+  .btn-secondary {
+    @apply flex items-center justify-center px-4 py-3 rounded-xl gap-2 bg-white text-gray-600;
+  }
 
   .title {
     @apply font-medium text-[32px]  text-primary-color-one;
@@ -48,6 +51,25 @@ button {
   }
   .btn {
     @apply flex items-center gap-3 bg-white text-primary-color-one justify-center rounded-md py-3.5;
+  }
+  .tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .tab-content.modal-active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
