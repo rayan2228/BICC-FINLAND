@@ -69,9 +69,11 @@
 
           <div class="relative overflow-hidden w-full max-w-[743px]">
             <div
+              id="playOverlay"
               class="absolute w-full h-full top-0 left-0 bg-black/50 rounded-3xl flex justify-center items-center"
             >
               <button
+                id="playButton"
                 class="bg-white flex justify-center items-center rounded-full w-16 h-16 md:w-18 md:h-18"
               >
                 <img src="../assets/icons/play.svg" />
@@ -79,6 +81,7 @@
             </div>
 
             <iframe
+              id="videoFrame"
               class="rounded-3xl w-full h-[220px] md:h-[368px]"
               src="https://www.youtube.com/embed/tQHAwV9B8hQ?si=s_9wLIN-0NoIqHVJ"
               title="YouTube video player"

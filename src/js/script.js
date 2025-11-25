@@ -57,3 +57,23 @@ modals.forEach((modal) => {
     }
   });
 });
+
+const playButton = document.getElementById("playButton");
+const playOverlay = document.getElementById("playOverlay");
+const videoFrame = document.getElementById("videoFrame");
+
+// Play video when button is clicked
+playOverlay.addEventListener("click", () => {
+  // Hide the overlay
+  playOverlay.style.display = "none";
+
+  // Get current src and add autoplay parameter
+  const currentSrc = videoFrame.src;
+
+  // Add autoplay parameter to start the video
+  if (currentSrc.includes("?")) {
+    videoFrame.src = currentSrc + "&autoplay=1";
+  } else {
+    videoFrame.src = currentSrc + "?autoplay=1";
+  }
+});
